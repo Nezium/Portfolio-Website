@@ -4,8 +4,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
     @apply border-gray-600;
   }
+}
   
 body {
   @apply bg-slate-900 text-white font-sans;
