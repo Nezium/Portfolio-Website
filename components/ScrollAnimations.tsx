@@ -34,7 +34,7 @@ const ScrollAnimations = () => {
       parallaxElements.forEach(element => {
         const speed = element.getAttribute('data-parallax') || '0.5'
         const yPos = -(scrolled * parseFloat(speed))
-        element.style.transform = `translateY(${yPos}px)`
+        ;(element as HTMLElement).style.transform = `translateY(${yPos}px)`
       })
 
       const floatingElements = document.querySelectorAll('.floating-element')
@@ -42,7 +42,7 @@ const ScrollAnimations = () => {
         const speed = 0.5 + (index * 0.1)
         const yPos = Math.sin(scrolled * 0.01 + index) * 20
         const xPos = Math.cos(scrolled * 0.01 + index) * 10
-        element.style.transform = `translate(${xPos}px, ${yPos}px)`
+        ;(element as HTMLElement).style.transform = `translate(${xPos}px, ${yPos}px)`
       })
 
       const scaleElements = document.querySelectorAll('.scale-on-scroll')
@@ -52,7 +52,7 @@ const ScrollAnimations = () => {
         if (isVisible) {
           const progress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / window.innerHeight))
           const scale = 0.8 + (progress * 0.2)
-          element.style.transform = `scale(${scale})`
+          ;(element as HTMLElement).style.transform = `scale(${scale})`
         }
       })
     }
