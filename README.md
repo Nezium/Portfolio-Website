@@ -15,5 +15,5 @@ npm run dev
 ```
 
 ## Contact
-- Email: agronostajski0@gmail.com
+- Email: tamktos635@gmail.com
 - GitHub: [Nezium](https://github.com/Nezium)
